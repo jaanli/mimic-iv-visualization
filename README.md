@@ -1,5 +1,41 @@
 # MIMIC-IV intensive care unit visualization
 
+# Data transformation using data build tool (`dbt`)
+
+Run the following:
+
+```
+brew install uv
+uv pip compile requirements.in -o requirements.txt
+python3 -m venv .venv
+source .venv/bin/activate # or for fish: source .venv/bin/activate.fish
+pip install -r requirements.txt
+```
+
+Then initialize the dbt project (only needs to be run once per repository):
+
+```
+dbt init data_processing
+```
+
+Edit the `profiles.yml` file appropriately in `/Users/me/.dbt/profiles.yml`:
+
+```yaml
+data_processing:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      # path: 'file_path/database_name.duckdb'
+      extensions:
+        - httpfs
+        - parquet
+      settings:
+        s3_region: my-aws-region
+        # s3_access_key_id: "{{ env_var('S3_ACCESS_KEY_ID') }}"
+        # s3_secret_access_key: "{{ env_var('S3_SECRET_ACCESS_KEY') }}"
+```
+
 ## Old README
 
 # mimic-iv-dbt-duckdb-visualization
