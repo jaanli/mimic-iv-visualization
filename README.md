@@ -1,5 +1,32 @@
 # MIMIC-IV intensive care unit visualization
 
+## Old README
+
+# mimic-iv-dbt-duckdb-visualization
+Using dbt and duckdb to transform and visualize MIMIC IV intensive care unit data from an emergency department.
+
+## Downloading the data
+
+Download the data from PhyioNet: https://physionet.org/content/mimiciv/3.0/
+
+Replace `USERNAME` with your credentialed username after completing the training and signing the data use agreement:
+
+```
+wget -r -N -c -np --user USERNAME --ask-password https://physionet.org/files/mimiciv/3.0/
+```
+
+## Ensuring compliance with HIPAA
+
+We follow the National Institute of Health guidelines for clinical data repositories such as All of Us, and do not include any output for public display with fewer than 20 individuals.
+
+# Observable Framework
+
+```
+npx @observablehq/framework@latest create
+```
+
+## Notes for website deployment
+
 This is an [Observable Framework](https://observablehq.com/framework) app. To start the local preview server, run:
 
 ```
