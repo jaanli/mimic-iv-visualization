@@ -36,6 +36,69 @@ data_processing:
         # s3_secret_access_key: "{{ env_var('S3_SECRET_ACCESS_KEY') }}"
 ```
 
+## Creating a dbt model for MIMIC-IV data
+Then create a new model to transform the data, using the headers of the raw csv files downloaded from the FTP server:
+
+```
+❯ ls ~/data/physionet.org/files/mimiciv/3.0/hosp/admissions.csv.gz 
+…3.0/hosp/admissions.csv.gz        …3.0/hosp/d_labitems.csv.gz   …3.0/hosp/microbiologyevents.csv.gz  …3.0/hosp/prescriptions.csv.gz 
+…3.0/hosp/diagnoses_icd.csv.gz     …3.0/hosp/emar.csv.gz         …3.0/hosp/omr.csv.gz                 …3.0/hosp/procedures_icd.csv.gz
+…3.0/hosp/drgcodes.csv.gz          …3.0/hosp/emar_detail.csv.gz  …3.0/hosp/patients.csv.gz            …3.0/hosp/provider.csv.gz      
+…3.0/hosp/d_hcpcs.csv.gz           …3.0/hosp/hcpcsevents.csv.gz  …3.0/hosp/pharmacy.csv.gz            …3.0/hosp/services.csv.gz      
+…3.0/hosp/d_icd_diagnoses.csv.gz   …3.0/hosp/index.html          …3.0/hosp/poe.csv.gz                 …3.0/hosp/transfers.csv.gz     
+…3.0/hosp/d_icd_procedures.csv.gz  …3.0/hosp/labevents.csv.gz    …3.0/hosp/poe_detail.csv.gz 
+```
+
+```
+❯ ls ~/data/physionet.org/files/mimiciv/3.0/icu/caregiver.csv.gz 
+…/3.0/icu/caregiver.csv.gz       …/3.0/icu/d_items.csv.gz   …/3.0/icu/ingredientevents.csv.gz  …/3.0/icu/procedureevents.csv.gz
+…/3.0/icu/chartevents.csv.gz     …/3.0/icu/icustays.csv.gz  …/3.0/icu/inputevents.csv.gz       
+…/3.0/icu/datetimeevents.csv.gz  …/3.0/icu/index.html       …/3.0/icu/outputevents.csv.gz 
+```
+
+To print the headers:
+
+```
+for file in ~/data/physionet.org/files/mimiciv/3.0/{hosp,icu}/*.csv.gz; do
+  if [ -f "$file" ]; then
+    echo "File: $file"
+    gzip -dc "$file" 2>/dev/null | head -n 6 | column -t -s,
+    if [ $? -ne 0 ]; then
+      echo "Error reading file. Check permissions or file integrity."
+    fi
+    echo "------------------------------"
+  fi
+done
+```
+
+To print a single header:
+
+```
+bash-5.2$ gzip -dc ~/data/physionet.org/files/mimiciv/3.0/hosp/admissions.csv.gz | head -n 2
+```
+
+Then ChatGPT or Claude can help build the data model for each file.
+
+To execute a single dbt model, use the `--select` flag:
+
+```
+dbt run --select models/example/hosp/admissions.sql
+```
+
+If this step completes successfully, you can test it by running a duckdb SQL query against the parquet database file you just created:
+
+A command such as `duckdb -c "SELECT * FROM '~/data/physionet.org/processed/mimiciv/hosp/admissions.parquet' LIMIT 10;"` should return the first 10 rows of the transformed data.
+
+Here is what the output looks like:
+
+```
+❯ duckdb -c "SELECT * FROM '~/data/physionet.org/processed/mimiciv/hosp/admissions.parquet' LIMIT 10;"
+┌────────────┬──────────┬─────────────────────┬─────────────────────┬───┬─────────────────────┬─────────────────────┬──────────────────────┐
+│ subject_id │ hadm_id  │      admittime      │      dischtime      │ … │      edregtime      │      edouttime      │ hospital_expire_flag │
+│   int32    │  int32   │      timestamp      │      timestamp      │   │      timestamp      │      timestamp      │       boolean        │
+├────────────┼──────────┼─────────────────────┼─────────────────────┼───┼─────────────────────┼─────────────────────┼──────────────────────┤
+```
+
 ## Old README
 
 # mimic-iv-dbt-duckdb-visualization
