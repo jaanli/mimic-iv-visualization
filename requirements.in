@@ -34,3 +34,6 @@ sqlfluff
 tabulate
 tqdm
 vega_datasets
+vegafusion
+vegafusion-python-embed
+vl-convert-python

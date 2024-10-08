@@ -17,7 +17,9 @@ aiosignal==1.3.1
 aiosqlite==0.20.0
     # via jupyter-ai
 altair==5.4.1
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   vegafusion
 annotated-types==0.7.0
     # via pydantic
 anthropic==0.35.0
@@ -533,6 +535,7 @@ pandas==2.2.3
     #   geopandas
     #   seaborn
     #   vega-datasets
+    #   vegafusion
 pandocfilters==1.5.1
     # via nbconvert
 parsedatetime==2.6
@@ -589,11 +592,13 @@ protobuf==4.25.5
     #   dbt-adapters
     #   dbt-common
     #   dbt-core
+    #   vegafusion
 psutil==6.0.0
     # via
     #   -r requirements.in
     #   distributed
     #   ipykernel
+    #   vegafusion
 psygnal==0.11.1
     # via anywidget
 ptyprocess==0.7.0
@@ -606,6 +611,7 @@ pyarrow==17.0.0
     # via
     #   -r requirements.in
     #   mosaic-widget
+    #   vegafusion
 pycparser==2.22
     # via cffi
 pydantic==2.9.2
@@ -892,6 +898,12 @@ urllib3==2.2.3
     #   distributed
     #   requests
 vega-datasets==0.9.0
+    # via -r requirements.in
+vegafusion==1.6.9
+    # via -r requirements.in
+vegafusion-python-embed==1.6.9
+    # via -r requirements.in
+vl-convert-python==1.7.0
     # via -r requirements.in
 wcwidth==0.2.13
     # via
