@@ -1,0 +1,102 @@
+[
+  {
+    "mdc_number": 1,
+    "mdc_description": "Diseases and disorders of the nervous system"
+  },
+  {
+    "mdc_number": 2,
+    "mdc_description": "Diseases and disorders of the eye"
+  },
+  {
+    "mdc_number": 3,
+    "mdc_description": "Diseases and disorders of the ear, nose, mouth and throat"
+  },
+  {
+    "mdc_number": 4,
+    "mdc_description": "Diseases and disorders of the respiratory system"
+  },
+  {
+    "mdc_number": 5,
+    "mdc_description": "Diseases and disorders of the circulatory system"
+  },
+  {
+    "mdc_number": 6,
+    "mdc_description": "Diseases and disorders of the digestive system"
+  },
+  {
+    "mdc_number": 7,
+    "mdc_description": "Diseases and disorders of the hepatobiliary system and pancreas"
+  },
+  {
+    "mdc_number": 8,
+    "mdc_description": "Diseases and disorders of the musculoskeletal system and connective tissue"
+  },
+  {
+    "mdc_number": 9,
+    "mdc_description": "Diseases and disorders of the skin, subcutaneous tissue and breast"
+  },
+  {
+    "mdc_number": 10,
+    "mdc_description": "Endocrine, nutritional and metabolic diseases and disorders"
+  },
+  {
+    "mdc_number": 11,
+    "mdc_description": "Diseases and disorders of the kidney and urinary tract"
+  },
+  {
+    "mdc_number": 12,
+    "mdc_description": "Diseases and disorders of the male reproductive system"
+  },
+  {
+    "mdc_number": 13,
+    "mdc_description": "Diseases and disorders of the female reproductive system"
+  },
+  {
+    "mdc_number": 14,
+    "mdc_description": "Pregnancy, childbirth and the puerperium"
+  },
+  {
+    "mdc_number": 15,
+    "mdc_description": "Newborns and other neonates with conditions originating in perinatal period"
+  },
+  {
+    "mdc_number": 16,
+    "mdc_description": "Diseases and disorders of blood, blood forming organs and immunologic disorders"
+  },
+  {
+    "mdc_number": 17,
+    "mdc_description": "Myeloproliferative diseases and disorders, poorly differentiated neoplasms"
+  },
+  {
+    "mdc_number": 18,
+    "mdc_description": "Infectious and parasitic diseases, systemic or unspecified sites"
+  },
+  {
+    "mdc_number": 19,
+    "mdc_description": "Mental diseases and disorders"
+  },
+  {
+    "mdc_number": 20,
+    "mdc_description": "Alcohol or drug use or induced organic mental disorders"
+  },
+  {
+    "mdc_number": 21,
+    "mdc_description": "Injuries, poisonings and toxic effects of drugs"
+  },
+  {
+    "mdc_number": 22,
+    "mdc_description": "Burns"
+  },
+  {
+    "mdc_number": 23,
+    "mdc_description": "Factors influencing health status and other contacts with health services"
+  },
+  {
+    "mdc_number": 24,
+    "mdc_description": "Multiple significant trauma"
+  },
+  {
+    "mdc_number": 25,
+    "mdc_description": "Human immunodeficiency virus infections"
+  }
+]
