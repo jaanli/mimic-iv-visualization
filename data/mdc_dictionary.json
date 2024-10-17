@@ -1,75 +1,75 @@
 [
   {
     "mdc_number": 1,
-    "mdc_description": "Diseases and disorders of the nervous system"
+    "mdc_description": "Nervous system"
   },
   {
     "mdc_number": 2,
-    "mdc_description": "Diseases and disorders of the eye"
+    "mdc_description": "Eye"
   },
   {
     "mdc_number": 3,
-    "mdc_description": "Diseases and disorders of the ear, nose, mouth and throat"
+    "mdc_description": "Ear, nose, mouth; throat"
   },
   {
     "mdc_number": 4,
-    "mdc_description": "Diseases and disorders of the respiratory system"
+    "mdc_description": "Respiratory system"
   },
   {
     "mdc_number": 5,
-    "mdc_description": "Diseases and disorders of the circulatory system"
+    "mdc_description": "Circulatory system"
   },
   {
     "mdc_number": 6,
-    "mdc_description": "Diseases and disorders of the digestive system"
+    "mdc_description": "Digestive system"
   },
   {
     "mdc_number": 7,
-    "mdc_description": "Diseases and disorders of the hepatobiliary system and pancreas"
+    "mdc_description": "Hepatobiliary system; pancreas"
   },
   {
     "mdc_number": 8,
-    "mdc_description": "Diseases and disorders of the musculoskeletal system and connective tissue"
+    "mdc_description": "Musculoskeletal system; connective tissue"
   },
   {
     "mdc_number": 9,
-    "mdc_description": "Diseases and disorders of the skin, subcutaneous tissue and breast"
+    "mdc_description": "Skin, subcutaneous tissue and breast"
   },
   {
     "mdc_number": 10,
-    "mdc_description": "Endocrine, nutritional and metabolic diseases and disorders"
+    "mdc_description": "Endocrine, nutritional; metabolic diseases, disorders"
   },
   {
     "mdc_number": 11,
-    "mdc_description": "Diseases and disorders of the kidney and urinary tract"
+    "mdc_description": "Kidney and urinary tract"
   },
   {
     "mdc_number": 12,
-    "mdc_description": "Diseases and disorders of the male reproductive system"
+    "mdc_description": "Male reproductive system"
   },
   {
     "mdc_number": 13,
-    "mdc_description": "Diseases and disorders of the female reproductive system"
+    "mdc_description": "Female reproductive system"
   },
   {
     "mdc_number": 14,
-    "mdc_description": "Pregnancy, childbirth and the puerperium"
+    "mdc_description": "Pregnancy, childbirth; puerperium"
   },
   {
     "mdc_number": 15,
-    "mdc_description": "Newborns and other neonates with conditions originating in perinatal period"
+    "mdc_description": "Newborns and other neonates"
   },
   {
     "mdc_number": 16,
-    "mdc_description": "Diseases and disorders of blood, blood forming organs and immunologic disorders"
+    "mdc_description": "Bblood, blood forming organs; immunologic disorders"
   },
   {
     "mdc_number": 17,
-    "mdc_description": "Myeloproliferative diseases and disorders, poorly differentiated neoplasms"
+    "mdc_description": "Myeloproliferative diseases and disorders"
   },
   {
     "mdc_number": 18,
-    "mdc_description": "Infectious and parasitic diseases, systemic or unspecified sites"
+    "mdc_description": "Infectious and parasitic diseases"
   },
   {
     "mdc_number": 19,
