@@ -4,3 +4,7 @@ node_modules/
 yarn-error.log
 logs/
 .venv
+
+__pycache__/
+
+*.egg-info/
